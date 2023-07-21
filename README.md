@@ -1,2 +1,2 @@
-# MICCAI-QC-ResUNet
+# QC-ResUNet
 This the repo for the MICCAI paper 
