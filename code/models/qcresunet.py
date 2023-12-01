@@ -96,7 +96,7 @@ class Up(nn.Module):
             return self.conv(x1)
 
 
-class ResUNet(nn.Module):
+class QCResUNet(nn.Module):
     def __init__(self, 
                  network_depth, 
                  num_input_channels, 
@@ -151,11 +151,11 @@ class ResUNet(nn.Module):
 
         return x_reg, x_seg
 
-def resunet34(num_input_channels=5, **kwargs):
-    return ResUNet(34, num_input_channels, 1, 1, **kwargs)
+def qc_resunet34(num_input_channels=5, **kwargs):
+    return QCResUNet(34, num_input_channels, 1, 1, **kwargs)
 
-def resunet50(num_input_channels=5, **kwargs):
-    return ResUNet(50, num_input_channels, 1, 1, **kwargs)
+def qc_resunet50(num_input_channels=5, **kwargs):
+    return QCResUNet(50, num_input_channels, 1, 1, **kwargs)
 
 if __name__ == "__main__":
     # def clever_format(nums, format="%.2f"):
